@@ -2,7 +2,6 @@ import { CARDS_IMG } from "../utils/constants";
 import { MdStars } from "react-icons/md";
 import { IoMdHeart } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { addToFavourites } from "../utils/favouriteRestaurantSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { ITEMS_IMG } from "../utils/constants";
