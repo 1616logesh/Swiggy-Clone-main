@@ -1,15 +1,18 @@
-import Cards, { Promotedrescards } from "./Cards";
-import resData from "../utils/mockData";
-import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer";
-import useOffline from "../utils/useOffline";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../App";
+import resData from "../utils/mockData";
+import useOffline from "../utils/useOffline";
+import Cards, { Promotedrescards } from "./Cards";
 import Footer from "./Footer";
-
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [resList, setList] = useState([]);
   const [filteredRest, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const name = useContext(Context);
+  console.log(name);
 
   const Promotedlabel = Promotedrescards(Cards);
   useEffect(() => {
